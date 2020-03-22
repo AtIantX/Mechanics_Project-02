@@ -1,7 +1,7 @@
 from random import randrange
 
 
-class Enviorment:
+class Environment:
 
     def __init__(self):
         self.mass_range = (0, 10)
