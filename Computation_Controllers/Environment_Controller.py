@@ -12,10 +12,11 @@ class Environment:
         self.get_global_variables()
         self.prepare_objects()
 
-    def generate_objects(self):
-        self.object1 = PhysicalObject()
-        self.object2 = PhysicalObject()
-        self.object3 = PhysicalObject()
+    @staticmethod
+    def generate_objects():
+        Environment.object1 = PhysicalObject()
+        Environment.object2 = PhysicalObject()
+        Environment.object3 = PhysicalObject()
 
     @staticmethod
     def get_global_variables():

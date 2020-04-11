@@ -7,7 +7,8 @@ class VariableController:
 
     def __init__(self):
         self.mass_range = (0, 10)
-        self.friction_range = (0, 0.5)
+        # ToDo Change to (0, 0.5)
+        self.friction_range = (0, 1)
         self.external_force_range = (-300, 300)
 
     def get_random_mass(self):

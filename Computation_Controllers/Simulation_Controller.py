@@ -9,10 +9,13 @@ class Simulation:
 
     def __init__(self):
         self.force_time = [[100, 0], [100, 5]]
+        # Prepare handling structures
+        self.create_environment()
+        self.create_compute_engine()
 
     @staticmethod
     def create_environment():
-        Simulation.Environment = Environment
+        Simulation.Environment = Environment()
 
     @staticmethod
     def create_compute_engine():
@@ -22,4 +25,5 @@ class Simulation:
 
     @staticmethod
     def start_simulation():
-        ComputationEngine.compute()
+        data = Simulation.Engine.compute()
+        print(data)
