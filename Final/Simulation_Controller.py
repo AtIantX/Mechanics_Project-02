@@ -16,7 +16,9 @@ class Simulation:
 
     @staticmethod
     def create_compute_engine():
-        Simulation.Engine = ComputationEngine()
+        Simulation.Engine = ComputationEngine(Simulation.Environment.object1, Simulation.Environment.object2,
+                                              Simulation.Environment.object3, Simulation.Environment.g,
+                                              Simulation.Environment.external_force)
 
     @staticmethod
     def start_simulation():
