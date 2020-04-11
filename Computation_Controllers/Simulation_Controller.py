@@ -24,6 +24,6 @@ class Simulation:
                                               Simulation.Environment.external_force)
 
     @staticmethod
-    def start_simulation():
-        data = Simulation.Engine.compute()
-        print(data)
+    def start_acceleration_computation_simulation():
+        data = Simulation.Engine.compute_accelaration()
+        return data

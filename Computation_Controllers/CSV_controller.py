@@ -1,7 +1,12 @@
 import csv
 
-with open('../Simulation_results/force_accelation.csv', 'wb') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=' ',
-                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    spamwriter.writerow(['Spam'] * 5 + ['Baked Beans'])
-    spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam'])
+
+class CSVController:
+
+    @staticmethod
+    def write_csv(csv_path, data, header):
+        with open(csv_path, "w") as csv_file:
+            writer = csv.writer(csv_file, delimiter=',')
+            data.insert(0, header)
+            for line in data:
+                writer.writerow(line)
